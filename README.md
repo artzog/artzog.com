@@ -1,2 +1,2 @@
 # artzog.com
-website of the artist Paul Zografakis
+Website for the artist Paul Zografakis
