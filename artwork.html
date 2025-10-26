@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork - Paul Zografakis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Paul Zografakis</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Works</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="artwork-detail-container">
+        <div class="artwork-detail">
+            <div class="artwork-detail-image-container">
+                <img src="images/placeholder-detail.jpg" alt="Artwork Title" id="artworkImage">
+            </div>
+            <div class="artwork-details">
+                <h1 id="artworkTitle">Artwork Title</h1>
+                
+                <div class="artwork-meta">
+                    <p><strong>Medium:</strong> <span id="artworkMedium">Oil on canvas</span></p>
+                    <p><strong>Year:</strong> <span id="artworkYear">2024</span></p>
+                    <p><strong>Dimensions:</strong> <span id="artworkDimensions">48 × 36 inches</span></p>
+                </div>
+
+                <div class="artwork-description">
+                    <p id="artworkDescription">
+                        This is a placeholder description for the artwork. Replace this text with details about the piece, your inspiration, materials, process, or any other relevant information.
+                    </p>
+                </div>
+
+                <a href="index.html" class="back-link">← Back to Works</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Paul Zografakis. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // This is a simple system to display different artworks
+        // In a real implementation, you'd use a database or CMS
+        const artworks = {
+            '1': {
+                title: 'Artwork Title 1',
+                medium: 'Oil on canvas',
+                year: '2024',
+                dimensions: '48 × 36 inches',
+                description: 'Description for artwork 1. Add details about this specific piece here.',
+                image: 'images/placeholder-1.jpg'
+            },
+            '2': {
+                title: 'Artwork Title 2',
+                medium: 'Mixed media on paper',
+                year: '2024',
+                dimensions: '30 × 22 inches',
+                description: 'Description for artwork 2. Add details about this specific piece here.',
+                image: 'images/placeholder-2.jpg'
+            },
+            // Add more artworks as needed
+        };
+
+        // Get artwork ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const artworkId = urlParams.get('id');
+
+        // Load artwork data
+        if (artworkId && artworks[artworkId]) {
+            const artwork = artworks[artworkId];
+            document.getElementById('artworkTitle').textContent = artwork.title;
+            document.getElementById('artworkMedium').textContent = artwork.medium;
+            document.getElementById('artworkYear').textContent = artwork.year;
+            document.getElementById('artworkDimensions').textContent = artwork.dimensions;
+            document.getElementById('artworkDescription').textContent = artwork.description;
+            document.getElementById('artworkImage').src = artwork.image;
+            document.getElementById('artworkImage').alt = artwork.title;
+            document.title = artwork.title + ' - Paul Zografakis';
+        }
+    </script>
+</body>
+</html>
