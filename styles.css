@@ -280,6 +280,12 @@ a:hover {
 .archive-item-title {
     font-weight: 400;
     margin-bottom: 0;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.archive-item-title:hover {
+    opacity: 0.6;
 }
 
 .archive-item-details {
