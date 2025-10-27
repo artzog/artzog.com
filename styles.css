@@ -1,5 +1,5 @@
-/* Import Manrope Font */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+/* Import DM Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap');
 
 /* Global Styles */
 * {
@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     color: #000;
     background-color: #fff;
     line-height: 1.6;
