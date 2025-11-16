@@ -44,6 +44,27 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.opacity = '1';
         });
     });
+
+    // Image hover swap functionality
+    const hoverSwapImages = document.querySelectorAll('.hover-swap');
+    hoverSwapImages.forEach(img => {
+        const hoverSrc = img.dataset.hoverSrc;
+        const defaultSrc = img.dataset.defaultSrc;
+
+        if (hoverSrc && defaultSrc) {
+            // Preload hover image
+            const preloadImg = new Image();
+            preloadImg.src = hoverSrc;
+
+            img.addEventListener('mouseenter', function() {
+                this.src = hoverSrc;
+            });
+
+            img.addEventListener('mouseleave', function() {
+                this.src = defaultSrc;
+            });
+        }
+    });
 });
 
 // Lazy loading for images (optional enhancement)
