@@ -1,1 +1,48 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>Archive — Paul Zografakis</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="gallery.css"></head><body><nav class="navbar"><div class="nav-container"><a href="index.html" class="logo">Paul Zografakis</a><ul class="nav-menu"><li><a href="index.html">Works</a></li><li><a href="about.html">About</a></li><li><a href="archive.html" class="active">Archive</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav><main class="gallery-page"><header class="gallery-page-header"><h1>Archive</h1><p>Selected projects and series</p></header><div class="project-grid" id="projects"></div><section class="other-projects"><h2>Additional projects</h2><p>Documentation to be added</p><ul><li>Dream and Reality</li><li>TBD To Be Determined</li><li>Volcanic Realities of Mordor</li><li>KAFENEON</li><li>Waiting for a Sign</li></ul></section></main><footer class="gallery-footer">© Paul Zografakis. All rights reserved.</footer><script src="projects.js"></script><script>const root=document.getElementById('projects'); for (const p of window.ARTZOG_PROJECTS){const a=document.createElement('a');a.className='project-card';a.href='project.html?project='+encodeURIComponent(p.slug);const image=document.createElement('img');image.src=p.cover;image.alt='';image.loading='lazy';image.decoding='async';const fig=document.createElement('div');fig.className='project-card-image';fig.append(image);const name=document.createElement('h2');name.textContent=p.title;const count=document.createElement('span');count.className='project-count';count.textContent=p.images.length+' images';a.append(name);root.append(a)}</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive - Paul Zografakis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Paul Zografakis</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Works</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="archive.html" class="active">Archive</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="archive-container">
+        <div class="archive-categories">
+            <div class="archive-category">
+                <ul class="archive-list">
+                    <li><a href="project.html?project=god-particles" class="archive-item-title">God Particles</a></li>
+                    <li><span class="archive-item-title">The Soft Intelligence</span></li>
+                    <li><span class="archive-item-title">The End of a Misunderstanding</span></li>
+                    <li><span class="archive-item-title">Frontman From Middle Earth</span></li>
+                    <li><span class="archive-item-title">Dream and Reality</span></li>
+                    <li><span class="archive-item-title">TBD To Be Determined</span></li>
+                    <li><span class="archive-item-title">Volcanic Realities of Mordor</span></li>
+                    <li><span class="archive-item-title">In Conversation With...</span></li>
+                    <li><span class="archive-item-title">Uber Creation and Ultimate Destruction...</span></li>
+                    <li><span class="archive-item-title">KAFENEON</span></li>
+                    <li><span class="archive-item-title">Waiting for a Sign</span></li>
+                    <li><span class="archive-item-title">One Eyed Warrior</span></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Paul Zografakis. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
