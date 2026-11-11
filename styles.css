@@ -492,3 +492,18 @@ footer p {
         font-size: 11px;
     }
 }
+
+/* Show a normal arrow over plain text (no text I-beam), pointer over links */
+body {
+    cursor: default;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+input,
+textarea {
+    cursor: text;
+}
